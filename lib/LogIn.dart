@@ -18,165 +18,167 @@ class LogIn extends StatelessWidget {
         child: Scaffold(
           backgroundColor: Colors.transparent,
 
-          body: Stack(
-            children: [
-              Center(
-                child: Container(
-                  padding: const EdgeInsets.only(bottom: 350),
-                  child: const Text(
-                    'Wanderly',
-                    style: TextStyle(
-                      fontSize: 30,
-                      color: Colors.white,
-                      fontFamily: "Dosis",
-                      fontWeight: FontWeight.w900,
+          body: SingleChildScrollView(
+            child: Stack(
+              children: [
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 200),
+                    child: const Text(
+                      'Wanderly',
+                      style: TextStyle(
+                        fontSize: 30,
+                        color: Colors.white,
+                        fontFamily: "Dosis",
+                        fontWeight: FontWeight.w900,
+                      ),
                     ),
                   ),
                 ),
-              ),
-              Center(
-                child: Container(
-                  padding: const EdgeInsets.only(bottom: 200),
-                  child: const Text(
-                    'Your Ultimate Companion For Seamless \n                    Travel Experiences',
-                    style: TextStyle(
-                        fontSize: 15,
-                        color: Colors.white,
-                        fontFamily: "Dosis",
-                        fontWeight: FontWeight.w600),
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 300),
+                    child: const Text(
+                      'Your Ultimate Companion For Seamless \n                    Travel Experiences',
+                      style: TextStyle(
+                          fontSize: 15,
+                          color: Colors.white,
+                          fontFamily: "Dosis",
+                          fontWeight: FontWeight.w600),
+                    ),
                   ),
                 ),
-              ),
-              Center(
-                child: Container(
-                  margin: const EdgeInsets.only(top: 500),
-                  child: Column(
-                    children: [
-                      ElevatedButton(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Screen1()),
-                          );
-                        },
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          padding: const EdgeInsets.only(
-                              left: 40, right: 40, top: 10, bottom: 10),
-                          primary: Colors.green.shade600,
-                          onPrimary: Colors.white,
-                        ),
-                        child: const Text(
-                          ' Sign in with Phone Number ',
-                          style: TextStyle(
-                              fontSize: 16,
-                              color: Colors.white,
-                              fontFamily: "Schyler",
-                              fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                      const SizedBox(height: 5),
-                      ElevatedButton.icon(
-                        onPressed: () {
-                          Navigator.push(
-                            context,
-                            MaterialPageRoute(builder: (context) => const Screen1()),
-                          );
-                        },
-                        icon: const Icon(Icons.apple, color: Colors.white),
-                        style: ElevatedButton.styleFrom(
-                          shape: RoundedRectangleBorder(
-                              borderRadius: BorderRadius.circular(20)),
-                          padding: const EdgeInsets.only(
-                              left: 55, right: 55, top: 8, bottom: 8),
-                          primary: Colors.grey.shade800,
-                          onPrimary: Colors.black,
-                        ),
-                        label: const Text(
-                          'Sign in with Apple ',
-                          style: TextStyle(
-                              fontSize: 17,
-                              color: Colors.white,
-                              fontFamily: "Schyler",
-                              fontWeight: FontWeight.w300),
-                        ),
-                      ),
-                    ],
-                  ),
-                ),
-              ),
-              Center(
-                child: Container(
-                  padding: const EdgeInsets.only(top: 415, left: 50, right: 50),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        child: const Text(
-                          "Don't have any Account?",
-                          style: TextStyle(
-                              fontSize: 13,
-                              color: Colors.white,
-                              fontFamily: "Dosis",
-                              fontWeight: FontWeight.w500),
-                        ),
-                      ),
-                      Container(
-                        child: TextButton(
-                          style: TextButton.styleFrom(
-                            foregroundColor: Colors.white,
-                            textStyle: const TextStyle(
-                                fontSize: 13,
-                                fontWeight: FontWeight.w900,
-                                fontFamily: 'Dosis'),
+                Center(
+                  child: Container(
+                    margin: const EdgeInsets.only(top: 500),
+                    child: Column(
+                      children: [
+                        ElevatedButton(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Screen1()),
+                            );
+                          },
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            padding: const EdgeInsets.only(
+                                left: 40, right: 40, top: 10, bottom: 10),
+                            primary: Colors.green.shade600,
+                            onPrimary: Colors.white,
                           ),
-                          onPressed: () {},
-                          child: const Text('Sign Up'),
+                          child: const Text(
+                            ' Sign in with Phone Number ',
+                            style: TextStyle(
+                                fontSize: 16,
+                                color: Colors.white,
+                                fontFamily: "Schyler",
+                                fontWeight: FontWeight.w300),
+                          ),
                         ),
-                      )
-                    ],
+                        const SizedBox(height: 10),
+                        ElevatedButton.icon(
+                          onPressed: () {
+                            Navigator.push(
+                              context,
+                              MaterialPageRoute(builder: (context) => const Screen1()),
+                            );
+                          },
+                          icon: const Icon(Icons.apple, color: Colors.white),
+                          style: ElevatedButton.styleFrom(
+                            shape: RoundedRectangleBorder(
+                                borderRadius: BorderRadius.circular(20)),
+                            padding: const EdgeInsets.only(
+                                left: 55, right: 55, top: 8, bottom: 8),
+                            primary: Colors.grey.shade800,
+                            onPrimary: Colors.black,
+                          ),
+                          label: const Text(
+                            'Sign in with Apple ',
+                            style: TextStyle(
+                                fontSize: 17,
+                                color: Colors.white,
+                                fontFamily: "Schyler",
+                                fontWeight: FontWeight.w300),
+                          ),
+                        ),
+                      ],
+                    ),
                   ),
                 ),
-              ),
-              Center(
-                child: Container(
-                  padding: const EdgeInsets.only(top: 635, left: 40, right: 40),
-                  child: Row(
-                    mainAxisAlignment: MainAxisAlignment.center,
-                    children: [
-                      Container(
-                        child: RichText(
-                          text: const TextSpan(
-                            text:
-                            'By creating an account or signing in, you agree to \n        our',
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 455, left: 50, right: 50),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: const Text(
+                            "Don't have any Account?",
                             style: TextStyle(
                                 fontSize: 13,
                                 color: Colors.white,
-                                fontWeight: FontWeight.w500,
-                                fontFamily: 'Dosis'),
-                            children: <TextSpan>[
-                              TextSpan(
-                                  text: ' Terms of Service',
-                                  style: TextStyle(
-                                      fontWeight: FontWeight.bold,
-                                      fontFamily: 'Dosis')),
-                              TextSpan(text: ' and'),
-                              TextSpan(
-                                  text: ' Privacy Policy ',
-                                  style: TextStyle(
-                                    fontWeight: FontWeight.bold,
-                                    fontFamily: 'Dosis',
-                                  )),
-                            ],
+                                fontFamily: "Dosis",
+                                fontWeight: FontWeight.w500),
                           ),
                         ),
-                      ),
-                    ],
+                        Container(
+                          child: TextButton(
+                            style: TextButton.styleFrom(
+                              foregroundColor: Colors.white,
+                              textStyle: const TextStyle(
+                                  fontSize: 13,
+                                  fontWeight: FontWeight.w900,
+                                  fontFamily: 'Dosis'),
+                            ),
+                            onPressed: () {},
+                            child: const Text('Sign Up'),
+                          ),
+                        )
+                      ],
+                    ),
                   ),
                 ),
-              ),
-            ],
+                Center(
+                  child: Container(
+                    padding: const EdgeInsets.only(top: 635, left: 40, right: 40),
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: [
+                        Container(
+                          child: RichText(
+                            text: const TextSpan(
+                              text:
+                              'By creating an account or signing in, you agree to \n \n       our',
+                              style: TextStyle(
+                                  fontSize: 13,
+                                  color: Colors.white,
+                                  fontWeight: FontWeight.w500,
+                                  fontFamily: 'Dosis'),
+                              children: <TextSpan>[
+                                TextSpan(
+                                    text: ' Terms of Service',
+                                    style: TextStyle(
+                                        fontWeight: FontWeight.bold,
+                                        fontFamily: 'Dosis')),
+                                TextSpan(text: ' and'),
+                                TextSpan(
+                                    text: ' Privacy Policy ',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.bold,
+                                      fontFamily: 'Dosis',
+                                    )),
+                              ],
+                            ),
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+              ],
+            ),
           ),
         ),
       ),
